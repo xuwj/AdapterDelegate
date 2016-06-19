@@ -1,0 +1,40 @@
+/**
+ * 通用属性
+ */
+
+def supportVersion = "23.1.0"
+def leakCanaryVersion = "1.3.1"
+
+def rxBindingVersion = '0.4.0'
+def daggerVersion = "2.0.2"
+def retrofitVersion = "2.0.0-beta4"
+def blockCanaryVersion = '1.1.4'
+
+project.ext {
+
+    applicationId = "com.xuwj.adapterdelegate1"
+    buildToolsVersion = "23.0.2"
+    compileSdkVersion = 23
+    minSdkVersion = 11
+    targetSdkVersion = 23
+    versionCode = 1
+    versionName = "1.0.0"
+
+    //--------libraries dependencies------------
+    supportDependencies = [
+            libSupportAppcompat        : "com.android.support:appcompat-v7:${supportVersion}",
+            libSupportAnnotations      : "com.android.support:support-annotations:${supportVersion}",
+            libSupportRecyclerview     : "com.android.support:recyclerview-v7:${supportVersion}",
+            libSupportDesign           : "com.android.support:design:${supportVersion}",
+
+            // 内存泄露
+            libLeakCanary              : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            libBlockcanary             : "com.github.moduth:blockcanary-ui:${blockCanaryVersion}",
+
+            // log工具 compile 'com.orhanobut:logger:1.12'
+            libLog                     : "com.github.orhanobut:logger:1.12",
+            libGson                    : "com.google.code.gson:gson:2.6.2",
+            libGsonUniversalimageloader: "com.nostra13.universalimageloader:universal-image-loader:1.9.5"
+    ]
+
+}
